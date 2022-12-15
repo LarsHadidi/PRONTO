@@ -14,6 +14,6 @@ It has been shown that the minimal amount of couples is nine and the total amoun
 To find a valid solution, all contraints must be satisfied. The solution will contain a path for each couple consisting of three locations and two links between them.
 
 
-** The Optimization**
+**The Optimization**
 
 A list of valid solutions may be generated using a CSP Solver. The routes may be of any length. To find a solution with routes as short as possible and guarantee accessibility on certain routes if enough locations provide accessibility options, a good or optimal solution is to be found.
