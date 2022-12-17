@@ -27,4 +27,10 @@ def decode(lat: Decimal, lon: Decimal) -> str:
 
 
 def routing_matrix(locations: List[location.Location]) -> List[List]:
-    pass
+    SEP = ';'
+    locations_string = SEP.join([f'{location.lon},{location.lat}' for location in locations])
+    response = requests.get(f'{base_url}/v1/matrix/driving/{locations_string}', params={'key': api_key})
+    if response.ok:
+        return response.json()['durations']
+    else:
+        raise Exception(response.reason)
