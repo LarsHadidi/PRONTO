@@ -10,8 +10,13 @@ api_key = os.getenv('GC_KEY')
 
 
 def encode(postal_address: str) -> (Decimal, Decimal):
-    pass
-    
+    response = requests.get(f'{base_url}/v1/search', params={'key': api_key, 'q': postal_address, 'format': 'json', 'limit': '1'})
+    if response.ok:
+        data = response.json()[0]
+        return Decimal(data['lat']), Decimal(data['lon'])
+    else:
+        return None, None
+
 
 def decode(lat: Decimal, lon: Decimal) -> str:
     pass
