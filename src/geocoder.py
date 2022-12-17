@@ -19,7 +19,11 @@ def encode(postal_address: str) -> (Decimal, Decimal):
 
 
 def decode(lat: Decimal, lon: Decimal) -> str:
-    pass
+    response = requests.get(f'{base_url}/v1/reverse', params={'key': api_key, 'lat': lat, 'lon': lon, 'format': 'json', 'postaladdress': '1'})
+    if response.ok:
+        return response.json()['postal_address']
+    else:
+        raise Exception(response.reason)
 
 
 def routing_matrix(locations: List[location.Location]) -> List[List]:
