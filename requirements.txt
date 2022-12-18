@@ -1,3 +1,5 @@
 behave
 requests
+fastapi
+uvicorn
 pony
