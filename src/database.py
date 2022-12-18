@@ -1,5 +1,6 @@
 from decimal import Decimal
 from pony.orm import *
+from node import Node
 import os
 
 
@@ -67,3 +68,11 @@ class Allergies(db.Entity):
 
 
 db.generate_mapping(create_tables = False)
+
+@db_session
+def get_location_nodes() -> List[Node]:
+    result = []
+    query = Location.select()
+    for location in list(query):
+         result.append(Node(lat=location.lat, lon=location.lon, postal_address=location.postal_address, capacity=location.capacity, accessibility=location.accessibility, pets=location.pets))
+    return result
