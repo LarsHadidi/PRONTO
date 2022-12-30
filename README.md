@@ -1,18 +1,9 @@
 # PRONTO
 **Pro**gressive Di**N**ner **T**our **O**ptimizer 
 ___
-<sub>Microservice</sub>
-<br/>
-<a href="https://github.com/codespaces/new?hide_repo_select=true&ref=main&repo=578729262&machine=standardLinux32gb&devcontainer_path=.devcontainer%2Fdevcontainer.json&location=WestEurope">
-<img src="https://github.com/codespaces/badge.svg" alt="Open in GitHub Codespaces" height="20%" width="20%"/>
-</a>
+[<img src="https://img.shields.io/static/v1?label=&message=Open%20in%20GitHub%20Codespaces&logo=github&labelColor=2f363d&color=24292e" alt="Open in GitHub Codespaces"/>](https://github.com/codespaces/new?hide_repo_select=true&ref=main&repo=578729262&machine=standardLinux32gb&devcontainer_path=.devcontainer%2Fdevcontainer.json&location=WestEurope)
+[<img src="https://img.shields.io/static/v1?label=&message=Open%20in%20Colab&logo=googlecolab&labelColor=555555&color=007ec6" alt="Open In Colab"/>](https://colab.research.google.com/github/LarsHadidi/PRONTO/blob/mathprogram/mp/PDP-MP.ipynb)
 
-<sub>Mathematical Program</sub>
-<br/>
-<a href="https://colab.research.google.com/github/LarsHadidi/PRONTO/blob/mathprogram/mp/PDP-MP.ipynb">
-<img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab" width="20%" height="20%"/>
-</a>
-___
 ## What's a progressive dinner 
 
 A progressive dinner or, more recently, safari supper, is a dinner party with successive courses prepared and eaten at the residences of different hosts. Usually this involves the consumption of one course at each location.
