@@ -20,4 +20,4 @@ https://doi.org/10.48550/arXiv.2001.05394)
 
 ## The optimization task
 
-Find a solution with routes as short as possible. Either enumerate all valid solutions using a CSP Solver and evaluate those solutions according the to route lengths or find an optimized solution directly using an ILP Solver or search the space of combinations using simulated annealing.
+Find a solution with routes as short as possible. Either enumerate all valid solutions using a CSP Solver and evaluate those solutions according the route lengths or find an optimized solution directly using an ILP Solver or search the space of combinations using simulated annealing.
