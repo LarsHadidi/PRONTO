@@ -20,4 +20,4 @@ https://doi.org/10.48550/arXiv.2001.05394)
 
 ## The optimization task
 
-A list of valid solutions may be generated using a CSP Solver. The routes may be of any length. To find a solution with routes as short as possible and guarantee accessibility on certain routes if enough locations provide accessibility options, a good or optimal solution is to be found.
+Find a solution with routes as short as possible. Either enumerate all valid solutions using a CSP Solver and evaluate those solutions according the to route lengths or find an optimized solution directly using an ILP Solver or search the space of combinations using simulated annealing.
