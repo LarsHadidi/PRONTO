@@ -1,18 +1,11 @@
 # PRONTO
 **Pro**gressive Di**N**ner **T**our **O**ptimizer 
 ___
-<sub>Microservice</sub>
-<br/>
-<a href="https://github.com/codespaces/badge.svg)](https://github.com/codespaces/new?hide_repo_select=true&ref=main&repo=578729262&machine=standardLinux32gb&devcontainer_path=.devcontainer%2Fdevcontainer.json&location=WestEurope">
-<img src="https://github.com/codespaces/badge.svg" alt="Open in GitHub Codespaces" height="20%" width="20%"/>
-</a>
+[<img src="https://img.shields.io/static/v1?label=&message=Open%20%C2%B5Service%20in%20GitHub%20Codespaces&logo=github&labelColor=2f363d&color=24292e" alt="Open µService in GitHub Codespaces"/>](https://github.com/codespaces/new?hide_repo_select=true&ref=main&repo=578729262&machine=standardLinux32gb&devcontainer_path=.devcontainer%2Fdevcontainer.json&location=WestEurope)
+[<img src="https://img.shields.io/static/v1?label=&message=Open%20MIP%20in%20Colab&logo=googlecolab&labelColor=555555&color=007ec6" alt="Open MIP In Colab"/>](https://colab.research.google.com/github/LarsHadidi/PRONTO/blob/mathprogram/mp/PDP-MIP.ipynb)
+[<img src="https://img.shields.io/static/v1?label=&message=Open%20CSP%20in%20Colab&logo=googlecolab&labelColor=555555&color=007ec6" alt="Open CSP In Colab"/>](https://colab.research.google.com/github/LarsHadidi/PRONTO/blob/mathprogram/mp/PDP-CSP.ipynb)
+[<img src="https://img.shields.io/static/v1?label=&message=Open%20AQC%20in%20Colab&logo=googlecolab&labelColor=555555&color=007ec6" alt="Open AQC In Colab"/>](https://colab.research.google.com/github/LarsHadidi/PRONTO/blob/mathprogram/mp/PDP-AQC.ipynb)
 
-<sub>Mathematical Program</sub>
-<br/>
-<a href="https://colab.research.google.com/github/LarsHadidi/PRONTO/blob/mathprogram/mp/PDP-MP.ipynb">
-<img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab" width="20%" height="20%"/>
-</a>
-___
 ## What's a progressive dinner 
 
 A progressive dinner or, more recently, safari supper, is a dinner party with successive courses prepared and eaten at the residences of different hosts. Usually this involves the consumption of one course at each location.
@@ -29,4 +22,4 @@ https://doi.org/10.48550/arXiv.2001.05394)
 
 ## The optimization task
 
-A list of valid solutions may be generated using a CSP Solver. The routes may be of any length. To find a solution with routes as short as possible and guarantee accessibility on certain routes if enough locations provide accessibility options, a good or optimal solution is to be found.
+Find a solution with routes as short as possible. Either enumerate all valid solutions using a CSP Solver and evaluate those solutions according the route lengths or find an optimized solution directly using an ILP Solver or search the space of combinations using simulated annealing.
