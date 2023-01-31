@@ -5,6 +5,7 @@ ___
 [<img src="https://img.shields.io/static/v1?label=&message=Open%20MIP%20in%20Colab&logo=googlecolab&labelColor=555555&color=007ec6" alt="Open MIP In Colab"/>](https://colab.research.google.com/github/LarsHadidi/PRONTO/blob/mathprogram/mp/PDP-MIP.ipynb)
 [<img src="https://img.shields.io/static/v1?label=&message=Open%20CSP%20in%20Colab&logo=googlecolab&labelColor=555555&color=007ec6" alt="Open CSP In Colab"/>](https://colab.research.google.com/github/LarsHadidi/PRONTO/blob/mathprogram/mp/PDP-CSP.ipynb)
 [<img src="https://img.shields.io/static/v1?label=&message=Open%20AQC%20in%20Colab&logo=googlecolab&labelColor=555555&color=007ec6" alt="Open AQC In Colab"/>](https://colab.research.google.com/github/LarsHadidi/PRONTO/blob/mathprogram/mp/PDP-AQC.ipynb)
+[<img src="https://img.shields.io/static/v1?label=&message=Open%20GEO%20in%20Colab&logo=googlecolab&labelColor=555555&color=007ec6" alt="Open GEO In Colab"/>](https://colab.research.google.com/github/LarsHadidi/PRONTO/blob/mathprogram/mp/PDP-GEO.ipynb)
 
 ## What's a progressive dinner 
 
@@ -22,4 +23,4 @@ https://doi.org/10.48550/arXiv.2001.05394)
 
 ## The optimization task
 
-Find a solution with routes as short as possible. Either enumerate all valid solutions using a CSP Solver and evaluate those solutions according the route lengths or find an optimized solution directly using an ILP Solver or search the space of combinations using simulated annealing.
+Find a solution with routes as short as possible.
