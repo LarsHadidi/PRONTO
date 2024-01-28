@@ -1,0 +1,16 @@
+{
+  "name": "Webclient-Codespace",
+	"image": "mcr.microsoft.com/devcontainers/universal:2",
+	"features": {
+		"ghcr.io/devcontainers-contrib/features/typescript:2": {},
+    "ghcr.io/devcontainers-contrib/features/nushell:1": {}
+	},
+	"customizations": {
+		"vscode": {
+			"extensions": [
+				"eamodio.gitlens",
+				"sonarsource.sonarlint-vscode"
+			]
+		}
+	}
+}
