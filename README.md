@@ -11,5 +11,8 @@ The event involves $N$ couples having each course of a three-course meal at a di
 
 ## Optimization
 Beyond finding a feasible solution, it is often desired to find a solution that minimizes the length of all travelled itineraries. This goes further than solving a multiple TSP problem.
+Different methods have been investigated on these [**Jupyter Notebooks**](https://github.com/LarsHadidi/PRONTO/tree/research/research)
 
 <br/><br/><br/>
+
+![Annealing](https://github.com/LarsHadidi/PRONTO/assets/12017203/6ec76ecd-87cf-4f5a-9254-4fbdcd5e55fb)
