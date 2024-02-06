@@ -1,0 +1,27 @@
+name: Linter Workflow
+
+on:
+  workflow_call:
+    inputs:
+      BRANCH_FOLDER:
+        required: true
+        type: string
+
+jobs:
+  lint:
+    name: SonarCloud Scan
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/download-artifact@v4
+        with:
+          path: ${{ inputs.BRANCH_FOLDER }}/artifacts
+      - name: SonarCloud Scan
+        uses: SonarSource/sonarcloud-github-action@master
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
+        with:
+          projectBaseDir: ${{ inputs.BRANCH_FOLDER }}/
