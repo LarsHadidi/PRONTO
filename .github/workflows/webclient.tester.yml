@@ -1,0 +1,35 @@
+name: Tester Workflow
+
+on:
+  workflow_call:
+    inputs:
+      BRANCH_FOLDER:
+        required: true
+        type: string
+      TEST_TYPE:
+        required: true
+        type: string
+      TEST_SUITE:                        
+        required: true
+        type: string
+
+jobs:
+  test:
+    name: Run Tests
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: ./${{ inputs.BRANCH_FOLDER }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - run: npm install
+      - run: npx playwright install --with-deps
+      - run: npx nyc --report-dir coverage npx cucumber-js -p default tests/features/${{ inputs.TEST_TYPE }}/${{ inputs.TEST_SUITE }}
+      - run: mv coverage/lcov.info coverage/${{ inputs.TEST_TYPE }}.${{ inputs.TEST_SUITE }}.lcov
+      - uses: actions/upload-artifact@v4
+        with:
+          name: ${{ inputs.TEST_TYPE }}-${{ inputs.TEST_SUITE }}
+          path: ${{ inputs.BRANCH_FOLDER }}/coverage/*
