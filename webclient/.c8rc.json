@@ -1,0 +1,4 @@
+{
+    "reporter": "lcovonly",
+    "temp-directory": "./.c8_tmp"
+}
