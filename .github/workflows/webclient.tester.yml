@@ -27,7 +27,7 @@ jobs:
           node-version: 20
       - run: npm install
       - run: npx playwright install --with-deps
-      - run: npx nyc --report-dir coverage npx cucumber-js -p default tests/features/${{ inputs.TEST_TYPE }}/${{ inputs.TEST_SUITE }}
+      - run: npx c8 npm run test -- tests/features/${{ inputs.TEST_TYPE }}/${{ inputs.TEST_SUITE }}
       - run: mv coverage/lcov.info coverage/${{ inputs.TEST_TYPE }}.${{ inputs.TEST_SUITE }}.lcov
       - uses: actions/upload-artifact@v4
         with:
