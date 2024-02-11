@@ -1,0 +1,23 @@
+name: Bumper Workflow
+
+on:
+  workflow_call:
+    inputs:
+      BRANCH_FOLDER:
+        required: true
+        type: string
+
+jobs:
+  bump:
+    name: Bump Package Version
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: phips28/gh-action-bump-version@master
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          PACKAGEJSON_DIR: ${{ inputs.BRANCH_FOLDER }}
+        with:
+          target-branch: ui-components
