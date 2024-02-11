@@ -1,0 +1,26 @@
+name: Publisher Workflow
+on:
+  workflow_call:
+    inputs:
+      BRANCH_FOLDER:
+        required: true
+        type: string
+
+jobs:
+  publish:
+    name: Publish Node Package
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - run: npm install
+        working-directory: ${{ inputs.BRANCH_FOLDER }}
+      - uses: JS-DevTools/npm-publish@v3
+        with:
+          registry: https://npm.pkg.github.com
+          package: ${{ inputs.BRANCH_FOLDER }}
+          token: ${{ secrets.GITHUB_TOKEN }}
