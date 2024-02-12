@@ -1,0 +1,32 @@
+name: UI-Components Workflow
+
+on:
+  push:
+    branches:
+      - ui-components
+
+jobs:
+  ui-components-format-flow:
+    uses: ./.github/workflows/ui-components.formatter.yml
+    with:
+      BRANCH_FOLDER: ui-components
+      
+  ui-components-lint-flow:
+    needs: ui-components-format-flow
+    uses: ./.github/workflows/ui-components.linter.yml
+    secrets: inherit
+    with:
+      BRANCH_FOLDER: ui-components
+      
+  ui-components-bump-flow:
+    needs: ui-components-format-flow
+    uses: ./.github/workflows/ui-components.bumper.yml
+    with:
+      BRANCH_FOLDER: ui-components
+      
+  ui-components-publish-flow:
+    needs: ui-components-bump-flow
+    uses: ./.github/workflows/ui-components.publisher.yml
+    secrets: inherit
+    with:
+      BRANCH_FOLDER: ui-components
