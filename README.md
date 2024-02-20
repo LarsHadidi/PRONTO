@@ -2,6 +2,16 @@
 **Pro**gressive Di**N**ner **T**our **O**ptimizer 
 ___
 
+### Navigation
+This repository hosts six major branches, three of which contain two sub-branches.
+* [[main]](https://github.com/LarsHadidi/PRONTO)
+* [[research]](https://github.com/LarsHadidi/PRONTO/tree/research/research)
+* [[ui-components]](https://github.com/LarsHadidi/PRONTO/tree/ui-components/ui-components)
+* [[servicelayer]](https://github.com/LarsHadidi/PRONTO/tree/servicelayer/development/servicelayer)
+* [[backoffice]](https://github.com/LarsHadidi/PRONTO/tree/backoffice/development/backoffice)
+* [[webclient]](https://github.com/LarsHadidi/PRONTO/tree/webclient/development/webclient)
+___
+
 <img align="right" width=33% src="https://github.com/LarsHadidi/PRONTO/assets/12017203/1aaba72c-372e-4810-83ac-b70c35dea0f4">
 
 ### What's a progressive dinner 
