@@ -36,6 +36,7 @@
     "@storybook/addon-essentials": "^7.6.15",
     "@storybook/addon-interactions": "^7.6.15",
     "@storybook/addon-links": "^7.6.15",
+    "@storybook/addon-svelte-csf": "^4.1.1",
     "@storybook/blocks": "^7.6.15",
     "@storybook/svelte": "^7.6.15",
     "@storybook/sveltekit": "^7.6.15",
