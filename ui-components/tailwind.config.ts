@@ -1,4 +1,3 @@
-
 import { join } from 'path';
 import type { Config } from 'tailwindcss';
 
@@ -17,6 +16,7 @@ const config = {
 		extend: {},
 	},
 	plugins: [
+		require('@tailwindcss/forms'),
 		// Append the Skeleton plugin after other plugins
 		skeleton({
       themes: { preset: [ { name: "hamlindigo", enhancements: true } ] }
@@ -24,5 +24,4 @@ const config = {
 	]
 } satisfies Config;
 
-export default config;
-						
+export default config;						
