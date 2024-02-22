@@ -1,7 +1,7 @@
 <script lang="ts" context="module">
   import { Story, Template } from '@storybook/addon-svelte-csf';
   import type { Meta } from '@storybook/svelte';
-  import Autocomplete from '../../lib/svelte-components/Autocomplete.svelte.js';
+  import Autocomplete from '../../lib/svelte-components/Autocomplete.svelte';
 
   export const meta: Meta<Autocomplete> = {
     component: Autocomplete,
