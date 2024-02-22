@@ -1,5 +1,5 @@
 {
-  "name": "ui-components",
+  "name": "@larshadidi/ui-components",
   "version": "0.0.1",
   "scripts": {
     "prebuild": "npx tsx ./generate-index.ts",
