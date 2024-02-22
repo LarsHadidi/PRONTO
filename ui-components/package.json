@@ -4,6 +4,7 @@
   "scripts": {
     "prebuild": "npx tsx ./generate-index.ts",
     "dev": "vite dev",
+    "format": "prettier --write **/*.{js,ts,css,html,json,svelte}",
     "build": "vite build && npm run package",
     "preview": "vite preview",
     "package": "svelte-kit sync && svelte-package && publint",
@@ -52,6 +53,8 @@
     "leaflet": "^1.9.4",
     "postcss": "^8.4.32",
     "postcss-load-config": "^5.0.2",
+    "prettier": "^3.2.5",
+    "prettier-plugin-svelte": "^3.2.1",
     "publint": "^0.1.9",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",

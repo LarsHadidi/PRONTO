@@ -19,7 +19,7 @@ jobs:
           node-version: 20
       - run: npm install
         working-directory: ${{ inputs.BRANCH_FOLDER }}
-      - run: npm build
+      - run: npm run build
         working-directory: ${{ inputs.BRANCH_FOLDER }}
       - uses: JS-DevTools/npm-publish@v3
         with:
