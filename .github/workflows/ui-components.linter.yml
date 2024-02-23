@@ -6,6 +6,9 @@ on:
       BRANCH_FOLDER:
         required: true
         type: string
+      COMMIT_SHA:
+        required: true
+        type: string
 
 jobs:
   lint:
@@ -15,6 +18,7 @@ jobs:
       - uses: actions/checkout@v4
         with:
           fetch-depth: 0
+          ref: ${{ inputs.COMMIT_SHA }}
       - name: SonarCloud Scan
         uses: SonarSource/sonarcloud-github-action@master
         env:
