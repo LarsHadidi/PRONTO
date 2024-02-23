@@ -6,18 +6,31 @@ on:
       BRANCH_FOLDER:
         required: true
         type: string
+      COMMIT_SHA:
+        required: true
+        type: string
+    outputs:
+      COMMIT_SHA:
+        value: ${{ jobs.bump.outputs.commit_sha }}
 
 jobs:
   bump:
     name: Bump Package Version
     runs-on: ubuntu-latest
+    outputs:
+      commit_sha: ${{ steps.sha_step.outputs.commit_sha }}
     steps:
       - uses: actions/checkout@v4
         with:
           fetch-depth: 0
+          ref: ${{ inputs.COMMIT_SHA }}
       - uses: phips28/gh-action-bump-version@master
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           PACKAGEJSON_DIR: ${{ inputs.BRANCH_FOLDER }}
         with:
           target-branch: ui-components
+      - id: sha_step
+        run: |
+          commit_sha=$(git rev-parse HEAD)
+          echo "commit_sha=$commit_sha" >> $GITHUB_OUTPUT
