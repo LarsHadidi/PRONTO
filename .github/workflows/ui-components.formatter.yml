@@ -30,5 +30,5 @@ jobs:
       - uses: EndBug/add-and-commit@v9
         id: commit_step
         with:
-          default_author: gh-action-format-code
+          default_author: github_actions
           message: 'ci: format code'
