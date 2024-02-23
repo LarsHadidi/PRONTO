@@ -17,12 +17,14 @@ jobs:
     secrets: inherit
     with:
       BRANCH_FOLDER: ui-components
+      COMMIT_SHA: ${{ needs.ui-components-format-flow.outputs.COMMIT_SHA }}
       
   ui-components-bump-flow:
     needs: ui-components-format-flow
     uses: ./.github/workflows/ui-components.bumper.yml
     with:
       BRANCH_FOLDER: ui-components
+      COMMIT_SHA: ${{ needs.ui-components-format-flow.outputs.COMMIT_SHA }}
       
   ui-components-publish-flow:
     needs: ui-components-bump-flow
@@ -30,3 +32,4 @@ jobs:
     secrets: inherit
     with:
       BRANCH_FOLDER: ui-components
+      COMMIT_SHA: ${{ needs.ui-components-bump-flow.outputs.COMMIT_SHA }}
