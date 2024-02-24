@@ -6,11 +6,16 @@ on:
       BRANCH_FOLDER:
         required: true
         type: string
+    outputs:
+      COMMIT_SHA:
+        value: ${{ jobs.format.outputs.commit_sha }}
 
 jobs:
   format:
     name: Prettify Code
     runs-on: ubuntu-latest
+    outputs:
+      commit_sha: ${{ steps.commit_step.outputs.commit_long_sha }}
     steps:
       - uses: actions/checkout@v4
         with:
