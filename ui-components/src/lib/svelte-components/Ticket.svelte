@@ -1,12 +1,12 @@
 <script lang="ts">
-	import { page } from '$app/stores';
-	export let name: string;
-	export let eventName = $page.data?.[name]?.name;
-	export let eventDate = $page.data?.[name]?.date;
-	export let eventVenue = $page.data?.[name]?.venue;
+  import { page } from "$app/stores";
+  export let name: string;
+  export let eventName = $page.data?.[name]?.name;
+  export let eventDate = $page.data?.[name]?.date;
+  export let eventVenue = $page.data?.[name]?.venue;
   export let ticketId = $page.data?.[name]?.ticketid;
-	const eventMonth = eventDate?.toLocaleString('default', { month: 'long' });
-	const eventDay = eventDate?.getDate();
+  const eventMonth = eventDate?.toLocaleString("default", { month: "long" });
+  const eventDay = eventDate?.getDate();
 </script>
 
 <div class="ticket">
@@ -20,7 +20,7 @@
       </span>
     </div>
     <div class="invite">
-      {eventMonth}<br/>{eventDay}
+      {eventMonth}<br />{eventDay}
     </div>
   </div>
   <div class="check">
@@ -63,7 +63,7 @@
     border-right: 1px dotted black;
   }
   .stub:before {
-    content: '';
+    content: "";
     position: absolute;
     top: 0;
     right: 0;
@@ -72,7 +72,7 @@
     width: 0;
   }
   .stub:after {
-    content: '';
+    content: "";
     position: absolute;
     bottom: 0;
     right: 0;
@@ -107,7 +107,7 @@
     width: 20%;
   }
   .stub .invite:before {
-    content: '';
+    content: "";
     background: #fff;
     display: block;
     width: 40px;
@@ -122,7 +122,7 @@
     position: relative;
   }
   .check:before {
-    content: '';
+    content: "";
     position: absolute;
     top: 0;
     left: 0;
@@ -131,7 +131,7 @@
     width: 0;
   }
   .check:after {
-    content: '';
+    content: "";
     position: absolute;
     bottom: 0;
     left: 0;
@@ -155,7 +155,7 @@
     margin-right: 50px;
   }
   .check .info section:before {
-    content: '';
+    content: "";
     background: #ef5658;
     display: block;
     width: 40px;

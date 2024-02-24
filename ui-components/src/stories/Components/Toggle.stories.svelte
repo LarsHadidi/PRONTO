@@ -1,29 +1,29 @@
 <script lang="ts" context="module">
-  import { Story, Template } from '@storybook/addon-svelte-csf';
-  import type { Meta } from '@storybook/svelte';
-  import Toggle from '../../lib/svelte-components/Toggle.svelte';
+  import { Story, Template } from "@storybook/addon-svelte-csf";
+  import type { Meta } from "@storybook/svelte";
+  import Toggle from "../../lib/svelte-components/Toggle.svelte";
 
   export const meta: Meta<Toggle> = {
     component: Toggle,
-    tags: ['autodocs'],
+    tags: ["autodocs"],
     parameters: {
-      fetchMock: { },
+      fetchMock: {},
       sveltekit_experimental: {
         stores: {
           page: {
             data: {
-              'example-data': true
-            }
-          }
-        }
-      }
+              "example-data": true,
+            },
+          },
+        },
+      },
     },
     argTypes: {
       label: {
         description: "Label for the Toggle to be displayed.",
-        control: { type: 'text' }
-      }
-    }
+        control: { type: "text" },
+      },
+    },
   };
 </script>
 
@@ -31,4 +31,4 @@
   <Toggle {...args}></Toggle>
 </Template>
 
-<Story name="Default" args={ {name: "example-data", label: "Light-Switch"} }/>
+<Story name="Default" args={{ name: "example-data", label: "Light-Switch" }} />

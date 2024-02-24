@@ -1,23 +1,23 @@
 <script lang="ts" context="module">
-  import { Story } from '@storybook/addon-svelte-csf';
-  import type { Meta } from '@storybook/svelte';
-  import DatePicker from '../../lib/svelte-components/DatePicker.svelte';
+  import { Story } from "@storybook/addon-svelte-csf";
+  import type { Meta } from "@storybook/svelte";
+  import DatePicker from "../../lib/svelte-components/DatePicker.svelte";
 
   export const meta: Meta<DatePicker> = {
     component: DatePicker,
-    tags: ['autodocs'],
+    tags: ["autodocs"],
     parameters: {
-      fetchMock: { },
+      fetchMock: {},
       sveltekit_experimental: {
         stores: {
           page: {
             data: {
-              'example-data': new Date()
-            }
-          }
-        }
-      }
-    }
+              "example-data": new Date(),
+            },
+          },
+        },
+      },
+    },
   };
 </script>
 
