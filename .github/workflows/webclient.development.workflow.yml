@@ -12,7 +12,6 @@ jobs:
       BRANCH_FOLDER: webclient
 
   webclient-test-flow:
-    needs: webclient-format-flow
     strategy:
       matrix:
         testtype: [e2e, unit]
@@ -24,8 +23,9 @@ jobs:
       TEST_SUITE: ${{ matrix.testsuite }}
 
   webclient-lint-flow:
-    needs: webclient-test-flow
+    needs: [webclient-format-flow, webclient-test-flow]
     uses: ./.github/workflows/webclient.linter.yml
     secrets: inherit
     with:
       BRANCH_FOLDER: webclient
+      COMMIT_SHA: ${{ needs.webclient-format-flow.outputs.COMMIT_SHA }}
