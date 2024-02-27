@@ -1,0 +1,16 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@tailwind variants;
+
+body {
+	padding: 1em;
+	font-family: system-ui;
+}
+html, body { @apply h-full overflow-hidden; }
+
+nav .tab-list {
+	@apply flex-wrap;
+	@apply flex-col;
+	@apply sm:flex-row;	
+}
