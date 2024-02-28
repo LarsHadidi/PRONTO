@@ -11,11 +11,16 @@ const config = {
       require.resolve("@skeletonlabs/skeleton"),
       "../**/*.{html,js,svelte,ts}",
     ),
+    join(
+      require.resolve("@larshadidi/ui-components"),
+      '../**/*.{html,js,svelte,ts}',
+    ),
   ],
   theme: {
     extend: {},
   },
   plugins: [
+    require("@tailwindcss/forms"),
     // Append the Skeleton plugin after other plugins
     skeleton({
       themes: { preset: [{ name: "hamlindigo", enhancements: true }] },
