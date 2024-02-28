@@ -8,6 +8,7 @@ The elements initialze with values from the `$page` store.
 <br/>
 
 > Documentation: [[**Storybook**](https://65d2704f28559c3f849cafc3-uohbowsjpd.chromatic.com/)]
+
 *Storybook* is a frontend workshop for building UI components in isolation.
 Integrated on *Chromatic*, a visual testing & review tool that scans every possible UI state across browsers to catch visual and functional bugs.
 
