@@ -1,6 +1,6 @@
 {
   "name": "@larshadidi/ui-components",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "scripts": {
     "prebuild": "npx tsx ./generate-index.ts",
     "dev": "vite dev",
