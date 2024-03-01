@@ -31,3 +31,13 @@ Beyond finding a feasible solution, it is often desired to find a solution that 
 Different methods have been investigated on these [**Jupyter Notebooks**](https://github.com/LarsHadidi/PRONTO/tree/research/research)
 
 <br clear="left"/>
+
+---
+
+### CI Pipeline
+
+On branches `servicelayer`, `backoffice` and `webclient`, three sub-brachnes are used to structure the process from development to production as shown on the diagram.
+
+<br/>
+
+![CI drawio (3)](https://github.com/LarsHadidi/PRONTO/assets/12017203/94606a3b-79fb-4982-aa22-0c04a6af1d4f)
